@@ -1,4 +1,10 @@
 Jvs::Application.routes.draw do
+
+  match '/contact_us', to: 'pages#contact'
+  match '/pricing', to: 'pages#pricing'
+  match '/what_we_offer', to: 'pages#offer'
+  root to: 'pages#welcome'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
