@@ -39,11 +39,8 @@ gem 'jquery-rails'
 
 group :test do
   gem 'rspec-rails'
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'mongoid-rspec'
-  gem "cucumber-rails"
-  gem "capybara"
+  gem 'webrat'
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
