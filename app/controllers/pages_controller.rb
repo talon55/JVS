@@ -5,15 +5,15 @@ class PagesController < ApplicationController
   end
 
   def offer
-    @title = "What We Offer"
+    @title = "WHAT WE OFFER"
   end
 
   def pricing
-    @title = "Pricing"
+    @title = "PRICING"
   end
 
   def contact
-    @title = "Contact Us"
+    @title = "CONTACT US"
   end
 
 end

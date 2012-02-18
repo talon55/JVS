@@ -1,3 +1,10 @@
+$grey-color: #797979;
+$text-color: #922522;
+$main-color: #e3d7bd;
+$container-color: #f9f4df;
+$wood-color: #9d8648;
+$main-width: 790px;
+
 
 @mixin round($radius: 5px) {
   -moz-border-radius:    $radius;
@@ -34,10 +41,13 @@ ul{
 }
 
 .container {
-  width: 710px;
+  width: $main-width;
+  margin-top: 20px;
+  background-color: $container-color
 }
 
 body {
+  background-color: $main-color
 }
 
 header {
@@ -45,13 +55,15 @@ header {
   height: 75px;
 
   nav {
-  background-color: white;
-  padding: 0 0.7em;
+  background-color: $wood-color;
+  padding: 0 15px;
   white-space: nowrap;
-  @include round;
   text-align: center;
-  color: #797979;
-  float: right;
+  color: #bdaf82;
+  float: center;
+  }
+
+  h4{
   }
 }
 
@@ -61,9 +73,7 @@ header img {
 }
 
 section {
-  margin-top: 1em;
   font-size: 120%;
-  padding: 20px;
   background: #fff;
 }
 
@@ -71,15 +81,27 @@ section h1 {
   font-size: 200%;
 }
 
+h1 {
+	color: $grey-color;
+   }
+
+h2 {
+	color: $grey-color;
+   }
+
+h3{
+	color: $grey-color;
+   }
+
 /* Links */
 
 a {
-  color: #797979;
+  color: $grey-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: #797979;
+  color: $grey-color;
   text-decoration: underline;
 }
 
@@ -106,11 +128,11 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: normal;
-  color: #797979;
+  color: $grey-color;
 }
 
 nav ul li a:visited {
-  color: #797979;
+  color: $grey-color;
 }
 
 nav ul li a:hover {
@@ -129,11 +151,11 @@ span.confirm {
 	visibility: visible;
 	bottom: 10px;
 	position: fixed;
-	height: 30px; /* must be the same value as height */
-	width: 790px;
+	height: 50px; /* must be the same value as height */
+	width: $main-width;
 	clear: both;
 	text-align: center; /* up to you */
-	color: #797979;
+	color: $grey-color;
 }
 
 #Splash

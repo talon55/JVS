@@ -2,8 +2,24 @@
 %html
   %head
     %title= title
-    = stylesheet_link_tag    "application"
-    = javascript_include_tag "application"
+    = render "/layouts/stylesheets"
     = csrf_meta_tags
-  %body
-    = yield
+
+  %body{id: body_css(params[:controller])}
+    .container
+      /banner image
+      .span-20
+        = render  "/layouts/header"
+
+      .span-20
+        %hr
+        %br
+
+      .span-20.last
+        %section
+          - flash.each do |name, msg|
+            = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+          = yield
+
+      .span-20.last
+        =render "/layouts/footer" 	    
