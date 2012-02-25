@@ -1,15 +1,19 @@
-$grey-color: #797979;
+$red-color: #A11411;
 $text-color: #922522;
 $main-color: #e3d7bd;
 $container-color: #f9f4df;
 $wood-color: #9d8648;
-$main-width: 790px;
+$main-width: 670px;
 
 
 @mixin round($radius: 5px) {
   -moz-border-radius:    $radius;
   -webkit-border-radius: $radius;
   border-radius:         $radius;
+}
+
+.span-17{
+  margin: 0 15px
 }
 
 ul{
@@ -41,18 +45,19 @@ ul{
 }
 
 .container {
-  width: $main-width;
+  width: 700px;
   margin-top: 20px;
   background-color: $container-color
 }
 
 body {
-  background-color: $main-color
+  background-color: $main-color;
+  font-family: Impact, sans-serif;
 }
 
 header {
   padding-top: 20px;
-  height: 75px;
+  //height: 75px;
 
   nav {
   background-color: $wood-color;
@@ -61,19 +66,42 @@ header {
   text-align: center;
   color: #bdaf82;
   float: center;
+  height: 40px;
   }
 
-  h4{
+  .h-line{
+    margin: 0 2px;
   }
-}
 
-header img {
-  padding: 1em;
-  background: #fff;
+  section{
+    height: 74px;
+    background-color: #d5c9a8;
+
+
+    span#title {
+      width:548px;
+      line-height: 1.2;
+      text-align: center;
+      color: $text-color;
+      font-size: 60px; // 5em = 60px since default is 12px
+      float: center;
+    }
+
+    span#left-hand{
+      float: left;
+      width: 51px;
+      padding: 24px 5px
+    }
+
+    span#right-hand{
+      float: right;
+      width: 51px;
+      padding: 24px 5px
+    }
+  }
 }
 
 section {
-  font-size: 120%;
   background: #fff;
 }
 
@@ -81,27 +109,13 @@ section h1 {
   font-size: 200%;
 }
 
-h1 {
-	color: $grey-color;
-   }
-
-h2 {
-	color: $grey-color;
-   }
-
-h3{
-	color: $grey-color;
-   }
-
 /* Links */
 
 a {
-  color: $grey-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: $grey-color;
   text-decoration: underline;
 }
 
@@ -122,25 +136,26 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0.2em 0;
+  padding: 9.5px 2px 9.5px 18px ;
+  font-size: 1.2em;
+}
+
+nav ul li#current{
+  color: white;
 }
 
 nav ul li a {
-  padding: 0 5px;
   font-weight: normal;
-  color: $grey-color;
+  color: $red-color;
 }
 
 nav ul li a:visited {
-  color: $grey-color;
+  color: #bdaf82;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-}
-
-span.confirm {
-  margin:0.5em 0 0 25%;
+  color: #8E000F;
+  text-decoration: none;
 }
 
 #admin_edit {
@@ -155,7 +170,8 @@ span.confirm {
 	width: $main-width;
 	clear: both;
 	text-align: center; /* up to you */
-	color: $grey-color;
+	color: #797979;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 #Splash

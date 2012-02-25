@@ -1,8 +1,18 @@
 %header
   %nav
     %ul.hmenu
-      %li= link_to "WELCOME", root_path
-      %li= link_to "WHAT WE OFFER", offer_path
-      %li= link_to "PRICING", pricing_path
-      %li= link_to "CONTACT US", contact_path
-      %li= link_to "GALLERY", '#'
+      -links = {"WELCOME" => root_path, "WHAT WE OFFER" => offer_path,
+            "PRICING" => pricing_path, "CONTACT US" => contact_path,
+            "GALLERY" => ''}
+      -links.each do |name, path|
+        - current = request.fullpath == path
+        - id_tag = current ? "current" : nil
+        %li{id: id_tag}= link_to_if !current, name, path
+  = image_tag "header_line1.png", class: 'h-line'
+
+  %section
+    %span#left-hand= image_tag "hand_left.png"
+    %span#title= site_title
+    %span#right-hand= image_tag "hand_right.png"
+
+  = image_tag "header_line1.png", class: 'h-line'

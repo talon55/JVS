@@ -9,6 +9,15 @@ module ApplicationHelper
     end
   end
 
+  def site_title
+    base_title = "JOHNNYVILLE SLUGGER"
+    if @title.blank?
+      base_title
+    else
+      @title
+    end
+  end
+
   def body_css(controller)
     if controller.include? 'devise'
       nil

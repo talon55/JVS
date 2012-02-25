@@ -7,19 +7,18 @@
 
   %body{id: body_css(params[:controller])}
     .container
-      /banner image
-      .span-20
+      .span-17
         = render  "/layouts/header"
 
-      .span-20
-        %hr
+      .span-17
+
         %br
 
-      .span-20.last
+      .span-17.last
         %section
-          - flash.each do |name, msg|
-            = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
           = yield
+          %br
+          /= @links
 
-      .span-20.last
+      .span-17.last
         =render "/layouts/footer" 	    
