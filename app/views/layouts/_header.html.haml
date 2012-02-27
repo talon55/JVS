@@ -10,9 +10,15 @@
         %li{id: id_tag}= link_to_if !current, name, path
   = image_tag "header_line1.png", class: 'h-line'
 
-  %section
-    %span#left-hand= image_tag "hand_left.png"
-    %span#title= site_title
-    %span#right-hand= image_tag "hand_right.png"
 
-  = image_tag "header_line1.png", class: 'h-line'
+  %section
+    .container
+      .span-17
+        .span-1
+          #left-hand= image_tag "hand_left.png"
+        .span-15
+          #title= site_title
+        .span-1.last
+          #right-hand= image_tag "hand_right.png"
+  
+    = image_tag "header_line1.png", class: 'h-line'

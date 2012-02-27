@@ -3,7 +3,7 @@ $text-color: #922522;
 $main-color: #e3d7bd;
 $container-color: #f9f4df;
 $wood-color: #9d8648;
-$main-width: 670px;
+$main-width: 700px;
 
 
 @mixin round($radius: 5px) {
@@ -13,7 +13,7 @@ $main-width: 670px;
 }
 
 .span-17{
-  margin: 0 15px
+  margin: 0 0px
 }
 
 ul{
@@ -78,8 +78,7 @@ header {
     background-color: #d5c9a8;
 
 
-    span#title {
-      width:548px;
+    #title {
       line-height: 1.2;
       text-align: center;
       color: $text-color;
@@ -87,15 +86,13 @@ header {
       float: center;
     }
 
-    span#left-hand{
+    #left-hand{
       float: left;
-      width: 51px;
       padding: 24px 5px
     }
 
-    span#right-hand{
+    #right-hand{
       float: right;
-      width: 51px;
       padding: 24px 5px
     }
   }
